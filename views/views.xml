@@ -1,0 +1,16 @@
+<odoo>
+    <record id="view_account_form_inherit_mandatory" model="ir.ui.view">
+        <field name="name">account.account.form.mandatory</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Mandatory Settings" col="2">
+                    <field name="mandatory_analytic_account"/>
+                    <field name="mandatory_partner"/>
+                    <field name="bypass_users_ids" widget="many2many_tags"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
